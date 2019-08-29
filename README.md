@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/ChipApp/TrueLayer.svg?branch=master)](https://travis-ci.org/ChipApp/TrueLayer)
 
 __Start a token request__
-```
+```PHP
 
 $tl = new TrueLayer\Connection(
     $client_id,
@@ -15,7 +15,7 @@ header('Location: ' . $tl->getAuthorizartionLink());
 ```
 
 __Exchange the token and get account info__
-```
+```PHP
 $token = $tl->getOauthToken($code);
 
 $accounts = (new TrueLayer\Bank\Accounts($tl, $token))
